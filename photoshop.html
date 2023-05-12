@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adobe Photoshop</title>
+    <link rel="stylesheet" href="ap_styles.css">
+</head>
+
+<body>
+    <div class="adobephotoshoplogo">
+        <img src="pslogo.png" alt="pslogo" width="150px" height="150px">
+        <div class="box">
+            <p>
+                <center>Adobe Photoshop</center>
+            </p>
+        </div>
+    </div>
+
+    <p style="text-align: center; font-size: 35px;">Photo Manipulation</p>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="p1.png" style="width:100%">
+            <div class="text">3D Soda Can</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="p2.png" style="width:100%">
+            <div class="text">Sharpening of Photo</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="p3.png" style="width:100%">
+            <div class="text">Color Adjustments</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="p4.png" style="width:100%">
+            <div class="text">Coloring hair</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <div class="koilogo">
+        <img src="KOI Solid Logo 1.png" alt="koilogo" width="200px" height="200px">
+        <div class="box2">
+            <p>
+                <center>In Collaboration with KOI.</center>
+            </p>
+        </div>
+    </div>
+    <div class="squiggle">
+        <img src="squiggle2.png" alt="squiggle" width="60px" height="60px">
+    </div>
+
+    <p class="p2">Adobe Photoshop part!</p>
+
+    <div class="container">
+        <img src="sketchkoi.png" alt="sketchkoi" class="image" style="float: left;">.
+        <div class="text-container">
+            <p class="p3">Sketch Stage: Sketching layout, characters, and planning the background for each panel.</p3>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="container" >
+        <img src="sketch2koi.png" alt="sketch2koi" class="image" style="float: left;">
+        <div class = "text-container">
+            <p class="p3">Refining Stage: Creating line art over the final sketch and deciding the color palette for each character and whole poster.</p3>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="container" >
+        <img src="finalkoi.png" alt="finalkoi" class="image" style="float: left;">
+        <div class = "text-container">
+            <p class="p3">Final Output: Finalizing the colors and lines of the overall art piece.</p3>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</body>
+
+</html>
